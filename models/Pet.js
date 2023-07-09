@@ -24,3 +24,4 @@ const petSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('Pet', petSchema)
+

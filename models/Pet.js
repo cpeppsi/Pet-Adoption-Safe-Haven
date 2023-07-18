@@ -1,13 +1,17 @@
 const mongoose = require("mongoose");
 
 const petSchema = new mongoose.Schema({
-  petType: {
+  image: {
+    type: String,
+    default:
+      "https://unsplash.com/photos/Rk8fHGGeyr8",
+  },
+  name: {
+    type: String,
+  },
+  type: {
     type: String,
     enum: ["Dog", "Cat"],
-  },
-  petName: {
-    type: String,
-    required: true
   },
   gender: {
     type: String,
@@ -15,29 +19,22 @@ const petSchema = new mongoose.Schema({
   },
   breed: {
     type: String,
-    required: true
   },
   age: {
     type: String,
-    required: true
   },
   adoptionStatus: {
     type: String,
-  },
-  image: {
-    type: String,
-    default:
-      "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/cat-placeholder.svg",
+    enum: ["Coming Soon", "Ready to Adopt", "Pending Adoption", "Adopted"],
   },
   introduction: {
     type: String,
-    required: true
   },
   details: {
     type: String,
-    required: true
   },
 });
 
 module.exports = mongoose.model("Pet", petSchema);
+
 

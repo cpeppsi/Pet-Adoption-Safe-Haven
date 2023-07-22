@@ -32,5 +32,5 @@ DB connected
 
 ### Link to the frontend
 ---
-Open the front end GitHub repository using the following link:
+Open the frontend GitHub repository using the following link:
 https://github.com/cpeppsi/Safe-Haven-Front-End.git
